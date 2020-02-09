@@ -7,7 +7,9 @@ def draw_line( x0, y0, x1, y1, screen, color ):
     y = int(y0)
     slope = float(A / B)
     # octant 1 and 5
+    print(slope)
     if (slope < 1 and slope > 0 ):
+        print("octant 1 or 5")
         oct1(A, B, x0, y0, x1, y1, screen, color)
 
 def oct1(A, B, x0, y0, x1, y1, screen, color):
