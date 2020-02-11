@@ -58,7 +58,7 @@ def draw_line( x0, y0, x1, y1, screen, color ):
                 y = y - 1
                 d = d - B2
         # octant 4 and 8
-    elif (slope < -1):
+        elif (slope < -1):
             print("octant 4 or 8")
             d = A2 + B
             while (x <= x1):
