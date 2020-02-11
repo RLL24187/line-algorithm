@@ -36,9 +36,9 @@ c = [ 0, 255, 0 ]
 # draw_line(int(XRES/2), 0, int(XRES/2), YRES-1, s, c);
 
 def drawstar(x0, y0, s, c, r):
-    draw_line(x0 - r, y0, x0 + r, y0, s, c) #vertical
+    draw_line(x0 - r, y0, x0 + r, y0, s, c) #horizontal
     draw_line(x0 - r, y0 - r, x0 + r, y0 + r, s, c) #slope 1
-    draw_line(x0, y0 - r, x0, y0 - r, s, c) #horizontal
+    draw_line(x0, y0 - r, x0, y0 + r, s, c) #vertical
     draw_line(x0 + r, y0 - r, x0 - r, y0 + r, s, c) #slope -1
 
 midx = int(XRES / 2)
@@ -66,7 +66,7 @@ for x in range (XRES - 1):
         n = random.randint(0, 10)
         if (n > 6):
             c = [0, 100, 240]
-            drawstar(int(x0), int(y0), s, c, n)
+            drawstar(int(x0), int(y0) - 10 * n, s, c, n)
 display(s)
 save_ppm(s, 'binary.ppm')
 save_ppm_ascii(s, 'ascii.ppm')
