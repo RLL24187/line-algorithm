@@ -41,9 +41,9 @@ y0 = int(YRES/2)
 for x1 in range (0, XRES + 1):
     y1 = math.sin(x1)
     draw_line(x0, y0, x1, y1, s, c)
-    if (x < (XRES + 1) / 3):
+    if (x1 < (XRES + 1) / 3):
         c[RED] = (c[RED] + 1) % 256
-    elif (x < (XRES + 1) * 2 / 3):
+    elif (x1 < (XRES + 1) * 2 / 3):
         c[BLUE] = (c[BLUE] - 1) % 256
     else:
         c[GREEN] = (c[GREEN] + 1) % 256
