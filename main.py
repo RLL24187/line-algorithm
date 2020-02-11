@@ -10,11 +10,11 @@ draw_line(0, 0, XRES-1, int(YRES / 2), s, c)
 draw_line(XRES-1, YRES-1, 0, int(YRES / 2), s, c)
 
 # #octants 8 and 4
-# c[BLUE] = 255;
-# draw_line(0, YRES-1, XRES-1, 0, s, c);
-# draw_line(0, YRES-1, XRES-1, YRES/2, s, c);
-# draw_line(XRES-1, 0, 0, YRES/2, s, c);
-#
+c[BLUE] = 255;
+draw_line(0, YRES-1, XRES-1, 0, s, c);
+draw_line(0, YRES-1, XRES-1, YRES/2, s, c);
+draw_line(XRES-1, 0, 0, YRES/2, s, c);
+
 #octants 2 and 6
 c[RED] = 255;
 c[GREEN] = 0;
