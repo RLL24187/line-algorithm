@@ -38,11 +38,10 @@ midx = int(XRES / 2)
 midy = int(XRES / 2)
 for x in range (XRES - 1):
     c = [0, 255, 0]
-    amp = int(x * math.sin(x))
-    x0 = midx
-    y0 = midy - amp
-    x1 = x
-    y1 = midy + amp
+    x0 = midx + (midx) * cos(x * math.pi / (XRES - 1))
+    y0 = midy + (midy) * sin(x * math.pi / (YRES - 1))
+    x1 = x0 / 4
+    y1 = y0 / 4
     Y = y0 - y1
     X = x0 - x1
     if (X == 0):
@@ -56,7 +55,6 @@ for x in range (XRES - 1):
             else:
                 c = [int(.5 * n) % 256, n % 256, int(.5 * n) % 256]
     draw_line(int(x0), int(y0), int(x1), int(y1), s, c)
-    x += 2
 
 display(s)
 save_ppm(s, 'binary.ppm')
