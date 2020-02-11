@@ -43,11 +43,11 @@ for x in range (XRES + 1):
     x1 = math.tan(y1)
     draw_line(x0, y0, x1, y1, s, c)
     if (x < (XRES + 1) / 3):
-        c[RED] += 1
+        c[RED] = (c[RED] + 1) % 256 
     elif (x < (XRES + 1) * 2 / 3):
-        c[BLUE] -= 1
+        c[BLUE] = (c[BLUE] - 1) % 256
     else:
-        c[GREEN] += 1
+        c[GREEN] = (c[GREEN] + 1) % 256
 
 display(s)
 save_ppm(s, 'binary.ppm')
