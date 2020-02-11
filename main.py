@@ -50,11 +50,11 @@ for x in range (XRES - 1):
     else:
         slope = Y / X
         if (slope != 0):
-            n = YRES / slope
+            n = int(YRES / slope)
             if (slope > 1):
                 c = [n % 256, (255 - n) % 256, n % 256]
             else:
-                c = [-1 * n % 256, n % 256, -2 * n % 256]
+                c = [int(-1 * n) % 256, n % 256, int(-2 * n) % 256]
 
     draw_line(int(x0), int(y0), int(x1), int(y1), s, c)
 
