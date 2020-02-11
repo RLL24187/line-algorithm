@@ -1,6 +1,7 @@
 from display import *
 
 def draw_line( x0, y0, x1, y1, screen, color ):
+    print("x0: " + x0 + " x1: " + x1 + " y0: " + y0 + " y1: " + y1)
     if (x1 < x0): # x1 should always be >= x0
         x1, x0 = x0, x1
         y1, y0 = y0, y1 # have to reverse y's too
