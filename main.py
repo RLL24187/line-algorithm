@@ -66,7 +66,7 @@ for x in range (XRES - 1):
         n = random.randint(0, 10)
         if (n > 6):
             c = [0, 100, 240]
-            drawstar(int(midx + x0 / n * 4), int(midy + y0 / n * 4), s, c, n / 2)
+            drawstar(int(midx + x0 / n * 4), int(midy + y0 / n * 4), s, c, int(n / 2))
 display(s)
 save_ppm(s, 'binary.ppm')
 save_ppm_ascii(s, 'ascii.ppm')
