@@ -33,5 +33,5 @@ def draw_line( x0, y0, x1, y1, screen, color ):
                 if (d > 0):
                     tempy = tempy + 1
                     d = d + B2
-                    tempx = tempx + 1
-                    d = d + A2
+                tempx = tempx + 1
+                d = d + A2
