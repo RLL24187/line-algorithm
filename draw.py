@@ -12,7 +12,6 @@ def draw_line( x0, y0, x1, y1, screen, color ):
         for y in range (y0, y1 + 1):
             plot(screen, color, x, y)
     else:
-        print("A: " + A + " B: " + B)
         slope = float(A / -B)
         print(slope)
         if (slope == 0): # horizontal line
