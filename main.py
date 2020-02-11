@@ -39,7 +39,7 @@ x0 = int(XRES/2)
 y0 = int(YRES/2)
 
 for x1 in range (0, XRES + 1):
-    y1 = math.sin(x1)
+    y1 = int(math.sin(x1))
     draw_line(x0, y0, x1, y1, s, c)
     if (x1 < (XRES + 1) / 3):
         c[RED] = (c[RED] + 1) % 256
