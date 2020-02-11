@@ -37,8 +37,22 @@ c = [ 0, 255, 0 ]
 midx = int(XRES / 2)
 midy = int(XRES / 2)
 for x in range (XRES - 1):
+    c = [0, 255, 0]
     amp = int(x * math.sin(x))
-    draw_line(midx, midy - amp, x, midy + amp, s, c)
+    x0 = midx
+    y0 = midy - amp
+    x1 = x
+    y1 = midy + amp
+    Y = y0 - y1
+    X = x0 - x1
+    if (X == 0):
+        c = [255, 255, 255]
+    else:
+        slope = Y / X
+        n = YRES / slope
+        if (slope > 1):
+            c = [n % 256, (255 - n) % 256, n % 256]
+    draw_line(x0, y0, x1, y1, s, c)
 
 display(s)
 save_ppm(s, 'binary.ppm')
