@@ -67,7 +67,7 @@ for x in range (XRES - 1):
         if (n > 6):
             c = [0, 100, 240]
             if (y1 > y0):
-                y = random.randInt(int(y0), int(y1))
+                y = random.randint(int(y0), int(y1))
             else:
                 y = random.randint(int(y1), int(y0))
             drawstar(int((x0 + x1) / 2), y, s, c, int(n / 2))
