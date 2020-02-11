@@ -47,8 +47,8 @@ for x in range (XRES - 1):
     c = [0, 255, 0]
     x0 = midx + (midx) * math.cos(x * math.pi / (XRES - 1))
     y0 = midy + (midy) * math.sin(x * math.pi / (YRES - 1))
-    x1 = midx + x0 / 4
-    y1 = midy + y0 / 4
+    x1 = (midx + x0) / 4
+    y1 = (midy + y0) / 4
     Y = y0 - y1
     X = x0 - x1
     if (X == 0):
