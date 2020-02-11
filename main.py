@@ -44,9 +44,9 @@ def drawstar(x0, y0, s, c, r):
 midx = int(XRES / 2)
 midy = int(XRES / 2)
 for x in range (XRES - 1):
-    c[RED] = c[RED] + 1 % 256
-    c[GREEN] = c[GREEN] + 2 % 256
-    c[BLUE] = c[BLUE] + 3 % 256
+    c[RED] = int(c[RED] + 1) % 256
+    c[GREEN] = int(c[GREEN] + 2) % 256
+    c[BLUE] = int(c[BLUE] + 3) % 256
     x0 = midx + (midx) * math.cos(x * math.pi / (XRES - 1))
     y0 = midy + (midy) * math.sin(x * math.pi / (YRES - 1))
     x1 = (midx + x0) / 4
@@ -64,6 +64,7 @@ for x in range (XRES - 1):
     #         else:
     #             c = [int(.5 * n) % 256, n % 256, int(.5 * n) % 256]
     draw_line(int(x0), int(y0), int(x1), int(y1), s, c)
+for (x in range (XRES - 1)):
     if (x > 10 and x < XRES - 11):
         n = random.randint(0, 10)
         if (n > 6):
