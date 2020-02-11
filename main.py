@@ -37,7 +37,7 @@ c = [ 0, 255, 0 ]
 x0 = int(XRES/2)
 y0 = int(YRES/2)
 
-for x in range (XRES + 1)
+for x in range (XRES + 1):
     y1 = math.sin(x)
     x1 = math.tan(y1)
     draw_line(x0, y0, x1, y1, s, c)
