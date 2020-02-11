@@ -5,18 +5,18 @@ def draw_line( x0, y0, x1, y1, screen, color ):
         x1, x0 = x0, x1
         y1, y0 = y0, y1 # have to reverse y's too
 
-    A = int(y0) - int(y1) #change in Y
-    B = int(x1) - int(x0) #negative change in X
+    A = int(y1) - int(y0) #change in Y
+    B = int(x0) - int(x1) #negative change in X
 
     if (B == 0): # check vertical line first to prevent 0 division
         for y in range (y0, y1 + 1):
-            plot(screen, color, x, y)
+            plot(screen, color, x0, y)
     else:
         slope = float(A / -B)
         print(slope)
         if (slope == 0): # horizontal line
             for x in range (x0, x1 + 1):
-                plot(screen, color, x, y)
+                plot(screen, color, x, y0)
 
         # octant 1 and 5
         # print(slope)
