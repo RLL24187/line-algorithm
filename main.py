@@ -56,7 +56,7 @@ for x in range (XRES - 1):
             else:
                 c = [-1 * n % 256, n % 256, -2 * n % 256]
 
-    draw_line(x0, y0, x1, y1, s, c)
+    draw_line(int(x0), int(y0), int(x1), int(y1), s, c)
 
 display(s)
 save_ppm(s, 'binary.ppm')
