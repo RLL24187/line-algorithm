@@ -53,16 +53,16 @@ for x in range (XRES - 1):
     y1 = (midy + y0) / 4
     Y = y0 - y1
     X = x0 - x1
-    if (X == 0):
-        c = [255, 255, 255]
-    else:
-        slope = Y / X
-        if (slope != 0):
-            n = int(YRES / slope)
-            if (slope > 1):
-                c = [n % 256, (255 - n) % 256, n % 256]
-            else:
-                c = [int(.5 * n) % 256, n % 256, int(.5 * n) % 256]
+    # if (X == 0):
+    #     c = [255, 255, 255]
+    # else:
+    #     slope = Y / X
+    #     if (slope != 0):
+    #         n = int(YRES / slope)
+    #         if (slope > 1):
+    #             c = [n % 256, (255 - n) % 256, n % 256]
+    #         else:
+    #             c = [int(.5 * n) % 256, n % 256, int(.5 * n) % 256]
     draw_line(int(x0), int(y0), int(x1), int(y1), s, c)
     if (x > 10 and x < XRES - 11):
         n = random.randint(0, 10)
