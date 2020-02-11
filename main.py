@@ -38,8 +38,8 @@ midx = int(XRES / 2)
 midy = int(XRES / 2)
 for x in range (XRES - 1):
     c = [0, 255, 0]
-    x0 = midx + (midx) * cos(x * math.pi / (XRES - 1))
-    y0 = midy + (midy) * sin(x * math.pi / (YRES - 1))
+    x0 = midx + (midx) * math.cos(x * math.pi / (XRES - 1))
+    y0 = midy + (midy) * math.sin(x * math.pi / (YRES - 1))
     x1 = x0 / 4
     y1 = y0 / 4
     Y = y0 - y1
