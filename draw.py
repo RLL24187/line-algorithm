@@ -6,7 +6,7 @@ def draw_line( x0, y0, x1, y1, screen, color ):
         y1, y0 = y0, y1 # have to reverse y's too
 
     Y = int(y0) - int(y1) #change in Y a.k.a. A
-    X = int(x0) - int(x0) #change in X a.k.a. -B
+    X = int(x0) - int(x1) #change in X a.k.a. -B
     tempx = x0
     tempy = y0
 
