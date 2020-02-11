@@ -12,12 +12,12 @@ def draw_line( x0, y0, x1, y1, screen, color ):
 
     if (X == 0): # check vertical line first to prevent 0 division
         for y in range (y0, y1 + 1):
-            plot(screen, color, tempx, tempy)
+            plot(screen, color, tempx, y)
     else:
         slope = float(Y / X)
         if (slope == 0): # horizontal line
             for x in range (x0, x1 + 1):
-                plot(screen, color, tempx, tempy)
+                plot(screen, color, x, tempy)
 
         # octant 1 and 5
         # print(slope)
