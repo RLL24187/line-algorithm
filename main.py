@@ -64,7 +64,7 @@ for x in range (XRES - 1):
     #         else:
     #             c = [int(.5 * n) % 256, n % 256, int(.5 * n) % 256]
     draw_line(int(x0), int(y0), int(x1), int(y1), s, c)
-for (x in range (XRES - 1)):
+for x in range (XRES - 1):
     if (x > 10 and x < XRES - 11):
         n = random.randint(0, 10)
         if (n > 6):
