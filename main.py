@@ -38,7 +38,7 @@ midx = int(XRES / 2)
 midy = int(XRES / 2)
 for x in range (XRES - 1):
     amp = int(x * math.sin(x))
-    draw_line(midx, midy - amp, x, midy + amp)
+    draw_line(midx, midy - amp, x, midy + amp, s, c)
 
 display(s)
 save_ppm(s, 'binary.ppm')
