@@ -47,8 +47,8 @@ for x in range (XRES - 1):
     c = [0, 255, 0]
     x0 = midx + (midx) * math.cos(x * math.pi / (XRES - 1))
     y0 = midy + (midy) * math.sin(x * math.pi / (YRES - 1))
-    x1 = midx / 2 + x0 / 4
-    y1 = midy / 2 + y0 / 4
+    x1 = (midx + x0) / 4
+    y1 = (midy + y0) / 4
     Y = y0 - y1
     X = x0 - x1
     if (X == 0):
@@ -65,9 +65,9 @@ for x in range (XRES - 1):
     if (x > 10 and x < XRES - 11):
         n = random.randint(0, 10)
         if (n > 6):
-            c = [0, 100, 240]
             x = random.randint(10, XRES - 11)
             y = random.randint(10, YRES - 11)
+            c = [ (x + y) % 256, x % 256, y % 256]
             drawstar(x, y, s, c, int(n / 2))
 display(s)
 save_ppm(s, 'binary.ppm')
