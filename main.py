@@ -4,35 +4,49 @@ from draw import *
 s = new_screen()
 c = [ 0, 255, 0 ]
 
-#octants 1 and 5
-draw_line(0, 0, XRES-1, YRES-1, s, c)
-draw_line(0, 0, XRES-1, int(YRES / 2), s, c)
-draw_line(XRES-1, YRES-1, 0, int(YRES / 2), s, c)
+# #octants 1 and 5
+# draw_line(0, 0, XRES-1, YRES-1, s, c)
+# draw_line(0, 0, XRES-1, int(YRES / 2), s, c)
+# draw_line(XRES-1, YRES-1, 0, int(YRES / 2), s, c)
+#
+# #octants 8 and 4
+# c[BLUE] = 255;
+# draw_line(0, YRES-1, XRES-1, 0, s, c);
+# draw_line(0, YRES-1, XRES-1, YRES/2, s, c);
+# draw_line(XRES-1, 0, 0, YRES/2, s, c);
+#
+# #octants 2 and 6
+# c[RED] = 255;
+# c[GREEN] = 0;
+# c[BLUE] = 0;
+# draw_line(0, 0, XRES/2, YRES-1, s, c);
+# draw_line(XRES-1, YRES-1, XRES/2, 0, s, c);
+#
+# #octants 7 and 3
+# c[BLUE] = 255;
+# draw_line(0, YRES-1, XRES/2, 0, s, c);
+# draw_line(XRES-1, 0, XRES/2, YRES-1, s, c);
+#
+# #horizontal and vertical
+# c[BLUE] = 0;
+# c[GREEN] = 255;
+# draw_line(0, int(YRES/2), XRES-1, int(YRES/2), s, c);
+# draw_line(int(XRES/2), 0, int(XRES/2), YRES-1, s, c);
 
-#octants 8 and 4
-c[BLUE] = 255;
-draw_line(0, YRES-1, XRES-1, 0, s, c);
-draw_line(0, YRES-1, XRES-1, YRES/2, s, c);
-draw_line(XRES-1, 0, 0, YRES/2, s, c);
 
-#octants 2 and 6
-c[RED] = 255;
-c[GREEN] = 0;
-c[BLUE] = 0;
-draw_line(0, 0, XRES/2, YRES-1, s, c);
-draw_line(XRES-1, YRES-1, XRES/2, 0, s, c);
+x0 = int(XRES/2)
+y0 = int(YRES/2)
 
-#octants 7 and 3
-c[BLUE] = 255;
-draw_line(0, YRES-1, XRES/2, 0, s, c);
-draw_line(XRES-1, 0, XRES/2, YRES-1, s, c);
-
-#horizontal and vertical
-c[BLUE] = 0;
-c[GREEN] = 255;
-draw_line(0, int(YRES/2), XRES-1, int(YRES/2), s, c);
-draw_line(int(XRES/2), 0, int(XRES/2), YRES-1, s, c);
-
+for x in range (XRES + 1)
+    y1 = math.sin(x)
+    x1 = math.tan(y1)
+    draw_line(x0, y0, x1, y1, s, c)
+    if (x < (XRES + 1) / 3):
+        c[RED] += 1
+    elif (x < (XRES + 1) * 2 / 3):
+        c[BLUE] -= 1
+    else:
+        c[GREEN] += 1
 
 display(s)
 save_ppm(s, 'binary.ppm')
