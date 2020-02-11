@@ -1,5 +1,6 @@
 from display import *
 from draw import *
+import math
 
 s = new_screen()
 c = [ 0, 255, 0 ]
