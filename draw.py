@@ -35,14 +35,14 @@ def draw_line( x0, y0, x1, y1, screen, color ):
                     d = d + B2
                 x = x + 1
                 d = d + A2
-        #octant 2 and 6
+        # octant 2 and 6
         elif (slope > 1):
             print("octant 2 or 6")
-                d = A + B2
-                while y <= y1:
-                    screen[y][x] = color
-                    if d < 0:
-                        x = x + 1
-                        d = d + A2
-                    y = y + 1
-                    d = d + B2
+            d = A + B2
+            while (y <= y1):
+                plot (screen, color, x, y)
+                if d < 0:
+                    x = x + 1
+                    d = d + A2
+                y = y + 1
+                d = d + B2
