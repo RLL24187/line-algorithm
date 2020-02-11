@@ -39,7 +39,7 @@ def drawstar(x0, y0, s, c, r):
     draw_line(x0 - r, y0, x0 + r, y0, s, c) #vertical
     draw_line(x0 - r, y0 - r, x0 + r, y0 + r, s, c) #slope 1
     draw_line(x0, y0 - r, x0, y0 - r, s, c) #horizontal
-    draw_line(x0 + r, y0 - r, x0 - r, y0 + r) #slope -1
+    draw_line(x0 + r, y0 - r, x0 - r, y0 + r, s, c) #slope -1
 
 midx = int(XRES / 2)
 midy = int(XRES / 2)
