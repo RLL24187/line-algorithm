@@ -62,7 +62,7 @@ def draw_line( x0, y0, x1, y1, screen, color ):
         elif (slope < -1):
             print("octant 3 or 7")
             d = A + B2
-            while (y <= y1):
+            while (y >= y1):
                 plot (screen, color, x, y)
                 if (d > 0):
                     x = x + 1
