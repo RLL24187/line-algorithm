@@ -54,9 +54,9 @@ for x in range (XRES - 1):
             if (slope > 1):
                 c = [n % 256, (255 - n) % 256, n % 256]
             else:
-                c = [int(-1 * n) % 256, n % 256, int(-2 * n) % 256]
-
+                c = [int(.5 * n) % 256, n % 256, int(.5 * n) % 256]
     draw_line(int(x0), int(y0), int(x1), int(y1), s, c)
+    x += 2
 
 display(s)
 save_ppm(s, 'binary.ppm')
