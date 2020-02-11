@@ -7,8 +7,8 @@ def draw_line( x0, y0, x1, y1, screen, color ):
 
     A = int(y0) - int(y1) #change in Y
     B = int(x1) - int(x0) #negative change in X
-    tempx = x0
-    tempy = y0
+    tempx = int(x0)
+    tempy = int(y0)
 
     if (B == 0): # check vertical line first to prevent 0 division
         for y in range (y0, y1 + 1):
