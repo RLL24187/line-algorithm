@@ -38,12 +38,11 @@ c = [ 0, 255, 0 ]
 x0 = int(XRES/2)
 y0 = int(YRES/2)
 
-for x in range (XRES + 1):
+for x1 in range (0, XRES + 1):
     y1 = math.sin(x)
-    x1 = math.tan(y1)
     draw_line(x0, y0, x1, y1, s, c)
     if (x < (XRES + 1) / 3):
-        c[RED] = (c[RED] + 1) % 256 
+        c[RED] = (c[RED] + 1) % 256
     elif (x < (XRES + 1) * 2 / 3):
         c[BLUE] = (c[BLUE] - 1) % 256
     else:
