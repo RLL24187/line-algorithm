@@ -6,7 +6,7 @@ c = [ 0, 255, 0 ]
 
 #octants 1 and 5
 draw_line(0, 0, XRES-1, YRES-1, s, c)
-draw_line(0, 0, XRES-1, int(RES / 2,) s, c)
+draw_line(0, 0, XRES-1, int(YRES / 2), s, c)
 draw_line(XRES-1, YRES-1, 0, int(YRES / 2), s, c)
 
 # #octants 8 and 4
